@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище turistModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="arenda">
+    <Key>
+      <PropertyRef Name="Arenda_Id" />
+    </Key>
+    <Property Name="Arenda_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Arendator_Id" Type="int" />
+    <Property Name="Nazvanie_TC" Type="varchar" MaxLength="20" />
+    <Property Name="Sotrudnil_Id" Type="int" />
+    <Property Name="Pavilion" Type="varchar(max)" />
+    <Property Name="Status" Type="varchar(max)" />
+    <Property Name="nachalo_Arend" Type="date" />
+    <Property Name="konec_Arend" Type="date" />
+  </EntityType>
+  <EntityType Name="Arendator">
+    <Key>
+      <PropertyRef Name="Arendator_Id" />
+    </Key>
+    <Property Name="Arendator_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Arenda_Id" Type="int" />
+    <Property Name="nazvanie" Type="varchar(max)" />
+    <Property Name="nomer" Type="varchar(max)" />
+    <Property Name="adres" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="pavilion">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nazvanie_Tc" Type="varchar" MaxLength="20" />
+    <Property Name="nomer_paviliona" Type="varchar(max)" />
+    <Property Name="etaj" Type="int" />
+    <Property Name="status" Type="varchar(max)" />
+    <Property Name="plochad" Type="float" />
+    <Property Name="stoimost_za_kv" Type="float" />
+    <Property Name="kof_dobav_stoimosti" Type="float" />
+  </EntityType>
+  <EntityType Name="Sotrudniki">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="FIO" Type="varchar(max)" />
+    <Property Name="Login" Type="varchar(max)" />
+    <Property Name="Password" Type="varchar(max)" />
+    <Property Name="Role" Type="varchar(max)" />
+    <Property Name="nomer_telefona" Type="varchar(max)" />
+    <Property Name="Pol" Type="varchar(max)" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Foto" Type="image" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TC1">
+    <Key>
+      <PropertyRef Name="Nazvanie" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nazvanie" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Status" Type="varchar(max)" />
+    <Property Name="Kol_Pavilionov" Type="int" />
+    <Property Name="Gorod" Type="varchar(max)" />
+    <Property Name="Stoimost" Type="float" />
+    <Property Name="Kof_Dobav_Stoimosti" Type="float" />
+    <Property Name="Etajnost" Type="int" />
+    <Property Name="Fhoto" Type="image" />
+  </EntityType>
+  <Association Name="FK_arenda_Arendator">
+    <End Role="Arendator" Type="Self.Arendator" Multiplicity="0..1" />
+    <End Role="arenda" Type="Self.arenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Arendator">
+        <PropertyRef Name="Arendator_Id" />
+      </Principal>
+      <Dependent Role="arenda">
+        <PropertyRef Name="Arendator_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_arenda_Sotrudniki">
+    <End Role="Sotrudniki" Type="Self.Sotrudniki" Multiplicity="0..1" />
+    <End Role="arenda" Type="Self.arenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sotrudniki">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="arenda">
+        <PropertyRef Name="Sotrudnil_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_arenda_TC1">
+    <End Role="TC1" Type="Self.TC1" Multiplicity="0..1" />
+    <End Role="arenda" Type="Self.arenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TC1">
+        <PropertyRef Name="Nazvanie" />
+      </Principal>
+      <Dependent Role="arenda">
+        <PropertyRef Name="Nazvanie_TC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pavilion_TC1">
+    <End Role="TC1" Type="Self.TC1" Multiplicity="0..1" />
+    <End Role="pavilion" Type="Self.pavilion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TC1">
+        <PropertyRef Name="Nazvanie" />
+      </Principal>
+      <Dependent Role="pavilion">
+        <PropertyRef Name="nazvanie_Tc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище turistModelContainer">
+    <EntitySet Name="arenda" EntityType="Self.arenda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Arendator" EntityType="Self.Arendator" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pavilion" EntityType="Self.pavilion" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sotrudniki" EntityType="Self.Sotrudniki" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TC1" EntityType="Self.TC1" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_arenda_Arendator" Association="Self.FK_arenda_Arendator">
+      <End Role="Arendator" EntitySet="Arendator" />
+      <End Role="arenda" EntitySet="arenda" />
+    </AssociationSet>
+    <AssociationSet Name="FK_arenda_Sotrudniki" Association="Self.FK_arenda_Sotrudniki">
+      <End Role="Sotrudniki" EntitySet="Sotrudniki" />
+      <End Role="arenda" EntitySet="arenda" />
+    </AssociationSet>
+    <AssociationSet Name="FK_arenda_TC1" Association="Self.FK_arenda_TC1">
+      <End Role="TC1" EntitySet="TC1" />
+      <End Role="arenda" EntitySet="arenda" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pavilion_TC1" Association="Self.FK_pavilion_TC1">
+      <End Role="TC1" EntitySet="TC1" />
+      <End Role="pavilion" EntitySet="pavilion" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

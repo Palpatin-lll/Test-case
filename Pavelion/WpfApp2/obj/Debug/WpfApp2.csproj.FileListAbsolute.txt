@@ -1,0 +1,62 @@
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\bin\Debug\WpfApp2.exe.config
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\bin\Debug\WpfApp2.exe
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\bin\Debug\WpfApp2.pdb
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\bin\Debug\EntityFramework.dll
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\bin\Debug\EntityFramework.xml
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\WpfApp2.csproj.AssemblyReference.cache
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\MainWindow.g.cs
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\Pages\Add_Redac_Arendator.g.cs
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\Pages\Add_Redac_Pavilion.g.cs
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\Pages\Add_Redac_Sotrudniki.g.cs
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\Pages\Add_Redac_TC.g.cs
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\Pages\Administrator.g.cs
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\Pages\Autoregistration.g.cs
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\Pages\Menedjer_A.g.cs
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\Pages\Menedjer_C.g.cs
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\Pages\Requast_Pavilion.g.cs
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\Pages\Requast_Tc.g.cs
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\App.g.cs
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\WpfApp2_Content.g.cs
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\WpfApp2_MarkupCompile.cache
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\WpfApp2_MarkupCompile.lref
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\MainWindow.baml
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\Pages\Add_Redac_Arendator.baml
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\Pages\Add_Redac_Pavilion.baml
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\Pages\Add_Redac_Sotrudniki.baml
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\Pages\Add_Redac_TC.baml
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\Pages\Administrator.baml
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\Pages\Autoregistration.baml
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\Pages\Menedjer_A.baml
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\Pages\Menedjer_C.baml
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\Pages\Requast_Pavilion.baml
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\Pages\Requast_Tc.baml
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\WpfApp2.g.resources
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\WpfApp2.Properties.Resources.resources
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\WpfApp2.csproj.GenerateResource.cache
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\WpfApp2.csproj.CoreCompileInputs.cache
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\WpfApp2.csproj.CopyComplete
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\WpfApp2.exe
+C:\Users\79775\Downloads\Telegram Desktop\session_1_2-master\WpfApp2\obj\Debug\WpfApp2.pdb
+C:\Users\79775\Desktop\Пары\Морозова\Задание квал отбор 2019 ЧМ_павильон_Каширин\session_1_2_Каширин\WpfApp2\obj\Debug\WpfApp2.csproj.AssemblyReference.cache
+C:\Users\79775\Desktop\Пары\Морозова\Задание квал отбор 2019 ЧМ_павильон_Каширин\session_1_2_Каширин\WpfApp2\obj\Debug\Dictionary1.baml
+C:\Users\79775\Desktop\Пары\Морозова\Задание квал отбор 2019 ЧМ_павильон_Каширин\session_1_2_Каширин\WpfApp2\obj\Debug\MainWindow.g.cs
+C:\Users\79775\Desktop\Пары\Морозова\Задание квал отбор 2019 ЧМ_павильон_Каширин\session_1_2_Каширин\WpfApp2\obj\Debug\Pages\Add_Redac_Arendator.g.cs
+C:\Users\79775\Desktop\Пары\Морозова\Задание квал отбор 2019 ЧМ_павильон_Каширин\session_1_2_Каширин\WpfApp2\obj\Debug\Pages\Add_Redac_Pavilion.g.cs
+C:\Users\79775\Desktop\Пары\Морозова\Задание квал отбор 2019 ЧМ_павильон_Каширин\session_1_2_Каширин\WpfApp2\obj\Debug\Pages\Add_Redac_Sotrudniki.g.cs
+C:\Users\79775\Desktop\Пары\Морозова\Задание квал отбор 2019 ЧМ_павильон_Каширин\session_1_2_Каширин\WpfApp2\obj\Debug\Pages\Add_Redac_TC.g.cs
+C:\Users\79775\Desktop\Пары\Морозова\Задание квал отбор 2019 ЧМ_павильон_Каширин\session_1_2_Каширин\WpfApp2\obj\Debug\Pages\Administrator.g.cs
+C:\Users\79775\Desktop\Пары\Морозова\Задание квал отбор 2019 ЧМ_павильон_Каширин\session_1_2_Каширин\WpfApp2\obj\Debug\Pages\Autoregistration.g.cs
+C:\Users\79775\Desktop\Пары\Морозова\Задание квал отбор 2019 ЧМ_павильон_Каширин\session_1_2_Каширин\WpfApp2\obj\Debug\Pages\Menedjer_A.g.cs
+C:\Users\79775\Desktop\Пары\Морозова\Задание квал отбор 2019 ЧМ_павильон_Каширин\session_1_2_Каширин\WpfApp2\obj\Debug\Pages\Menedjer_C.g.cs
+C:\Users\79775\Desktop\Пары\Морозова\Задание квал отбор 2019 ЧМ_павильон_Каширин\session_1_2_Каширин\WpfApp2\obj\Debug\Pages\Requast_Pavilion.g.cs
+C:\Users\79775\Desktop\Пары\Морозова\Задание квал отбор 2019 ЧМ_павильон_Каширин\session_1_2_Каширин\WpfApp2\obj\Debug\Pages\Requast_Tc.g.cs
+C:\Users\79775\Desktop\Пары\Морозова\Задание квал отбор 2019 ЧМ_павильон_Каширин\session_1_2_Каширин\WpfApp2\obj\Debug\App.g.cs
+C:\Users\79775\Desktop\Пары\Морозова\Задание квал отбор 2019 ЧМ_павильон_Каширин\session_1_2_Каширин\WpfApp2\obj\Debug\WpfApp2_Content.g.cs
+C:\Users\79775\Desktop\Пары\Морозова\Задание квал отбор 2019 ЧМ_павильон_Каширин\session_1_2_Каширин\WpfApp2\obj\Debug\WpfApp2_MarkupCompile.cache
+C:\Users\79775\Desktop\Пары\Морозова\Задание квал отбор 2019 ЧМ_павильон_Каширин\session_1_2_Каширин\WpfApp2\obj\Debug\WpfApp2_MarkupCompile.lref
+C:\Users\79775\Desktop\Пары\Морозова\Задание квал отбор 2019 ЧМ_павильон_Каширин\session_1_2_Каширин\WpfApp2\obj\Debug\WpfApp2.exe
+C:\Users\79775\Desktop\Пары\Морозова\Задание квал отбор 2019 ЧМ_павильон_Каширин\session_1_2_Каширин\WpfApp2\obj\Debug\WpfApp2.pdb

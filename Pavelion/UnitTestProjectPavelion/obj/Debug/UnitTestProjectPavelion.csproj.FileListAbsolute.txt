@@ -1,0 +1,2 @@
+C:\Users\79775\Desktop\Пары\Морозова\Задание квал отбор 2019 ЧМ_павильон_Каширин\session_1_2_Каширин\UnitTestProjectPavelion\obj\Debug\UnitTestProjectPavelion.csproj.AssemblyReference.cache
+C:\Users\79775\Desktop\Пары\Морозова\Задание квал отбор 2019 ЧМ_павильон_Каширин\session_1_2_Каширин\UnitTestProjectPavelion\obj\Debug\UnitTestProjectPavelion.csproj.CoreCompileInputs.cache

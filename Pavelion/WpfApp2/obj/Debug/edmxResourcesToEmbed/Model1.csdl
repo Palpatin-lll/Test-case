@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="turistModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="arenda">
+    <Key>
+      <PropertyRef Name="Arenda_Id" />
+    </Key>
+    <Property Name="Arenda_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Arendator_Id" Type="Int32" />
+    <Property Name="Nazvanie_TC" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Sotrudnil_Id" Type="Int32" />
+    <Property Name="Pavilion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="nachalo_Arend" Type="DateTime" Precision="0" />
+    <Property Name="konec_Arend" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Arendator" Relationship="Self.FK_arenda_Arendator" FromRole="arenda" ToRole="Arendator" />
+    <NavigationProperty Name="Sotrudniki" Relationship="Self.FK_arenda_Sotrudniki" FromRole="arenda" ToRole="Sotrudniki" />
+    <NavigationProperty Name="TC1" Relationship="Self.FK_arenda_TC1" FromRole="arenda" ToRole="TC1" />
+  </EntityType>
+  <EntityType Name="Arendator">
+    <Key>
+      <PropertyRef Name="Arendator_Id" />
+    </Key>
+    <Property Name="Arendator_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Arenda_Id" Type="Int32" />
+    <Property Name="nazvanie" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="nomer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="adres" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="arenda" Relationship="Self.FK_arenda_Arendator" FromRole="Arendator" ToRole="arenda" />
+  </EntityType>
+  <EntityType Name="pavilion">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nazvanie_Tc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="nomer_paviliona" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="etaj" Type="Int32" />
+    <Property Name="status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="plochad" Type="Double" />
+    <Property Name="stoimost_za_kv" Type="Double" />
+    <Property Name="kof_dobav_stoimosti" Type="Double" />
+    <NavigationProperty Name="TC1" Relationship="Self.FK_pavilion_TC1" FromRole="pavilion" ToRole="TC1" />
+  </EntityType>
+  <EntityType Name="Sotrudniki">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="FIO" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Login" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Role" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="nomer_telefona" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Pol" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Foto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="arenda" Relationship="Self.FK_arenda_Sotrudniki" FromRole="Sotrudniki" ToRole="arenda" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TC1">
+    <Key>
+      <PropertyRef Name="Nazvanie" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nazvanie" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Kol_Pavilionov" Type="Int32" />
+    <Property Name="Gorod" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Stoimost" Type="Double" />
+    <Property Name="Kof_Dobav_Stoimosti" Type="Double" />
+    <Property Name="Etajnost" Type="Int32" />
+    <Property Name="Fhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="arenda" Relationship="Self.FK_arenda_TC1" FromRole="TC1" ToRole="arenda" />
+    <NavigationProperty Name="pavilion" Relationship="Self.FK_pavilion_TC1" FromRole="TC1" ToRole="pavilion" />
+  </EntityType>
+  <Association Name="FK_arenda_Arendator">
+    <End Role="Arendator" Type="Self.Arendator" Multiplicity="0..1" />
+    <End Role="arenda" Type="Self.arenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Arendator">
+        <PropertyRef Name="Arendator_Id" />
+      </Principal>
+      <Dependent Role="arenda">
+        <PropertyRef Name="Arendator_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_arenda_Sotrudniki">
+    <End Role="Sotrudniki" Type="Self.Sotrudniki" Multiplicity="0..1" />
+    <End Role="arenda" Type="Self.arenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sotrudniki">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="arenda">
+        <PropertyRef Name="Sotrudnil_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_arenda_TC1">
+    <End Role="TC1" Type="Self.TC1" Multiplicity="0..1" />
+    <End Role="arenda" Type="Self.arenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TC1">
+        <PropertyRef Name="Nazvanie" />
+      </Principal>
+      <Dependent Role="arenda">
+        <PropertyRef Name="Nazvanie_TC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_pavilion_TC1">
+    <End Role="TC1" Type="Self.TC1" Multiplicity="0..1" />
+    <End Role="pavilion" Type="Self.pavilion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TC1">
+        <PropertyRef Name="Nazvanie" />
+      </Principal>
+      <Dependent Role="pavilion">
+        <PropertyRef Name="nazvanie_Tc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="arenda" EntityType="Self.arenda" />
+    <EntitySet Name="Arendator" EntityType="Self.Arendator" />
+    <EntitySet Name="pavilion" EntityType="Self.pavilion" />
+    <EntitySet Name="Sotrudniki" EntityType="Self.Sotrudniki" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="TC1" EntityType="Self.TC1" />
+    <AssociationSet Name="FK_arenda_Arendator" Association="Self.FK_arenda_Arendator">
+      <End Role="Arendator" EntitySet="Arendator" />
+      <End Role="arenda" EntitySet="arenda" />
+    </AssociationSet>
+    <AssociationSet Name="FK_arenda_Sotrudniki" Association="Self.FK_arenda_Sotrudniki">
+      <End Role="Sotrudniki" EntitySet="Sotrudniki" />
+      <End Role="arenda" EntitySet="arenda" />
+    </AssociationSet>
+    <AssociationSet Name="FK_arenda_TC1" Association="Self.FK_arenda_TC1">
+      <End Role="TC1" EntitySet="TC1" />
+      <End Role="arenda" EntitySet="arenda" />
+    </AssociationSet>
+    <AssociationSet Name="FK_pavilion_TC1" Association="Self.FK_pavilion_TC1">
+      <End Role="TC1" EntitySet="TC1" />
+      <End Role="pavilion" EntitySet="pavilion" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
